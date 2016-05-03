@@ -1,0 +1,86 @@
+[global_config]
+  handle_size = 1
+  enabled_plugins = LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
+  geometry_hinting = False
+  title_transmit_bg_color = "#560c0c"
+  tab_position = hidden
+  title_inactive_bg_color = "#646464"
+[keybindings]
+[profiles]
+  [[default]]
+    background_image = None
+    background_darkness = 0.91
+    scrollback_lines = 5000
+    background_type = transparent
+    scrollbar_position = hidden
+    foreground_color = "#656763"
+    icon_bell = False
+    show_titlebar = False
+    background_color = "#1c1c1c"
+[layouts]
+  [[default]]
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+      profile = default
+    [[[window0]]]
+      type = Window
+      parent = ""
+  [[status]]
+    [[[child0]]]
+      position = 960:19
+      type = Window
+      order = 0
+      parent = ""
+      size = 960, 1047
+    [[[child1]]]
+      position = 480
+      type = HPaned
+      order = 0
+      parent = child0
+    [[[child3]]]
+      position = 706
+      type = VPaned
+      order = 1
+      parent = child1
+    [[[child4]]]
+      position = 366
+      type = VPaned
+      order = 0
+      parent = child3
+    [[[child7]]]
+      position = 193
+      type = VPaned
+      order = 1
+      parent = child3
+    [[[terminal2]]]
+      profile = default
+      type = Terminal
+      order = 0
+      parent = child1
+      command = htop
+    [[[terminal5]]]
+      profile = default
+      type = Terminal
+      order = 0
+      parent = child4
+      command = sudo watch "netstat -tulpn"
+    [[[terminal6]]]
+      profile = default
+      type = Terminal
+      order = 1
+      parent = child4
+      command = sudo tail -f /var/log/everything.log
+    [[[terminal9]]]
+      profile = default
+      type = Terminal
+      order = 1
+      parent = child7
+      command = bwm-ng
+    [[[terminal8]]]
+      profile = default
+      type = Terminal
+      order = 0
+      parent = child7
+      command = sudo iotop -o
+[plugins]
