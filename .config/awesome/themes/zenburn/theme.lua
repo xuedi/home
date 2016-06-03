@@ -8,7 +8,7 @@
 
 -- {{{ Main
 theme = {}
-theme.wallpaper_cmd = { "awsetbg /home/xuedi/private/media/pictures/wallpapers/1325613505520.jpg" }
+theme.wallpaper_cmd = { "awsetbg /home/xuedi/.config/awesome/themes/1325613505520.jpg" }
 -- }}}
 
 -- {{{ Styles
