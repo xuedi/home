@@ -172,7 +172,7 @@ xmenu = {
     { "gogglesmm", "gogglesmm" },
     { "banshee", "banshee" },
     { "gimp", "gimp" },
-    { "shotwell", "shotwell" },
+    { "shotwell", "bash /home/xuedi/bin/shotwell.sh" },
     { "inkscape", "inkscape" },
     { "guvcview", "guvcview" },
     { "handbreake", "ghb" },
@@ -505,6 +505,7 @@ awful.rules.rules = {
     { rule = { class = "Thunderbird" }, properties = { tag = tags[1][11] } },
     { rule = { class = "net-minecraft-LauncherFrame" }, properties = { tag = tags[1][12] } },
     { rule = { class = "com-sun-javaws-Main" }, properties = { tag = tags[1][12] } },
+    { rule = { class = "Remmina" }, properties = { tag = tags[1][14] } },
     { rule = { class = "Deluge" }, properties = { tag = tags[1][13] } }
     
 }

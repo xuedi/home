@@ -4,8 +4,8 @@
 
 ### fix problems
 # java grey fix
-wmname LG3D
-_JAVA_AWT_WM_NONREPARENTING=1; export _JAVA_AWT_WM_NONREPARENTING
+#wmname LG3D
+#_JAVA_AWT_WM_NONREPARENTING=1; export _JAVA_AWT_WM_NONREPARENTING
 
 
 ### thunar deamon
@@ -24,8 +24,8 @@ conky &
 #tint2 &
 
 ### keyring
-eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
-export SSH_AUTH_SOCK
+#eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
+#export SSH_AUTH_SOCK
 
 ### wallpaper
 feh --bg-scale ~/private/media/pictures/wallpapers/1325613505520.jpg
@@ -42,14 +42,11 @@ xbindkeys &
 pasystray &
 
 ### do in script in awesome for ex
-#dropboxd start &
+#dropbox &
 #keepassx &
 
 ### Input manager
 fcitx &
 
 ### Start window Manager
-#exec gnome-session
 exec awesome
-#exec openbox-session
-#exec enlightenment_start
