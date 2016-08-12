@@ -136,6 +136,10 @@ xmenu = {
       { "remmina", "remmina" },
       { "xfreerdp", "xfreerdp" }}
     },
+    { "Annon", {
+      { "BitMessage", "bash /home/xuedi/bin/pybitmessage.py" },
+      { "TorBrowser", "tor-browser-en" }}
+    },
     { "firefox", "bash /home/xuedi/bin/firefox.sh" },
     { "geary", "geary" },
     { "claws", "bash /home/xuedi/bin/claws.sh" },

@@ -24,8 +24,8 @@ conky &
 #tint2 &
 
 ### keyring
-#eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
-#export SSH_AUTH_SOCK
+eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
+export SSH_AUTH_SOCK
 
 ### wallpaper
 feh --bg-scale ~/private/media/pictures/wallpapers/1325613505520.jpg
@@ -44,6 +44,7 @@ pasystray &
 ### do in script in awesome for ex
 #dropbox &
 #keepassx &
+owncloud &
 
 ### Input manager
 fcitx &
