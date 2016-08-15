@@ -47,7 +47,7 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, and wallpapers
-beautiful.init("/home/xuedi/.config/awesome/themes/zenburn/theme.lua")
+beautiful.init("~/.config/awesome/themes/zenburn/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "terminator"
@@ -117,7 +117,7 @@ xmenu = {
       { "lxappearance", "lxappearance" },
       { "palimpsest", "gnome-disks" },
       { "systemadm", "sudo systemadm" },
-      { "status", "terminator-status -l status" },
+      { "status", "terminator -l status" },
       { "LOG-files", "sudo gnome-system-log" },
       { "unetbootin", "unetbootin" }}
     },
