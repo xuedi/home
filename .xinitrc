@@ -28,7 +28,7 @@ eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
 export SSH_AUTH_SOCK
 
 ### wallpaper
-feh --bg-scale ~/private/media/pictures/wallpapers/1325613505520.jpg
+feh --bg-scale ~/.config/awesome/themes/bg.jpg
 
 ### Bind custom keys like for screenshots
 xbindkeys &
@@ -38,8 +38,8 @@ xbindkeys &
 #amixer sset Master unmute
 
 ### volume manager
-#volti &
-pasystray &
+volti &
+#pasystray &
 
 ### do in script in awesome for ex
 #dropbox &
