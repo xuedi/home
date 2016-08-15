@@ -16,6 +16,11 @@ export GNOME_KEYRING_PID
 export XDG_CURRENT_DESKTOP=GNOME
 
 
+### Fix mouse speed for G402
+if [ -f ~/bin/mouse.sh ]; then
+    bash ~/bin/mouse.sh
+fi
+
 
 ### Wallpaper
 feh --bg-scale ~/.config/awesome/themes/bg.jpg
