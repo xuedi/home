@@ -2,52 +2,23 @@
 # autostarted by bash_profile
 
 
-### fix problems
-# java grey fix
-#wmname LG3D
-#_JAVA_AWT_WM_NONREPARENTING=1; export _JAVA_AWT_WM_NONREPARENTING
-
-
-### thunar deamon
-#thunar --daemon &
-
-### eye candy
-conky &
-#tilda &
-
-### compositor
-#xcompmgr -c & # -c = corners
-#xcompmgr &
-
-### panel
-#bmpanel2 --theme=noir &
-#tint2 &
-
-### keyring
-eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
+### Keyring (https://wiki.archlinux.org/index.php/GNOME/Keyring#Automatic_login)
+eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh,gpg)
 export SSH_AUTH_SOCK
 
-### wallpaper
+### Wallpaper
 feh --bg-scale ~/.config/awesome/themes/bg.jpg
 
-### Bind custom keys like for screenshots
+### Custom keys (.xbindkeysrc)
 xbindkeys &
 
-### start audio # should be in /etc/X11/xinit/xinitrc.d/
-#start-pulseaudio-x11
-#amixer sset Master unmute
-
-### volume manager
+### Stuff
+wicd-gtk --tray &
+pcmanfm -d &
 volti &
-#pasystray &
-
-### do in script in awesome for ex
-#dropbox &
-#keepassx &
 owncloud &
-
-### Input manager
 fcitx &
+conky &
 
-### Start window Manager
+### Start WM
 exec awesome
