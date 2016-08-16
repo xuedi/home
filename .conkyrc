@@ -3,8 +3,9 @@ alignment bottom_middle
 background yes
 border_width 1
 cpu_avg_samples 2
-default_color 222222
-default_outline_color 222222
+default_color 333333
+default_outline_color 2222ff
+color1 666666
 draw_borders no
 border_margin 0
 border_width 0
@@ -28,15 +29,12 @@ own_window_type desktop
 own_window_transparent yes
 stippled_borders 0
 update_interval 1.0
+update_interval_on_battery 5.0
 uppercase no
 use_spacer left
 show_graph_scale no
 show_graph_range no
 format_human_readable yes
-
-color1 666666
-color2 888888
-color3 444444
 
 mpd_host 127.0.0.1
 

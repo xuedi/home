@@ -31,12 +31,16 @@ xbindkeys &
 
 
 ### Common Stuff
-wicd-gtk --tray &
 pcmanfm -d &
-volti &
 fcitx &
-conky &
 owncloud &
+if [ "$HOSTNAME" = snowfield ]; then
+	wicd-gtk --tray &
+    volti &
+else
+    pavucontrol &
+    conky &
+fi
 
 
 ### SystemDefaults
