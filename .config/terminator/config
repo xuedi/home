@@ -28,59 +28,64 @@
       parent = ""
   [[status]]
     [[[child0]]]
-      position = 960:19
       type = Window
       order = 0
       parent = ""
-      size = 960, 1047
     [[[child1]]]
-      position = 480
       type = HPaned
       order = 0
       parent = child0
+    [[[child2]]]
+      type = VPaned
+      order = 0
+      parent = child1
     [[[child3]]]
-      position = 706
       type = VPaned
       order = 1
       parent = child1
     [[[child4]]]
-      position = 366
-      type = VPaned
-      order = 0
-      parent = child3
-    [[[child7]]]
-      position = 193
       type = VPaned
       order = 1
       parent = child3
-    [[[terminal2]]]
-      profile = default
+    [[[terminal1]]]
       type = Terminal
       order = 0
-      parent = child1
+      parent = child2
       command = htop
-    [[[terminal5]]]
       profile = default
+    [[[terminal2]]]
+      type = Terminal
+      order = 1
+      parent = child2
+      command = echo test
+    [[[terminal3]]]
+      type = Terminal
+      order = 0
+      parent = child3
+      command = 'sudo watch "netstat -tulpn"'
+      profile = default
+      size = 500, 300
+    [[[terminal4]]]
       type = Terminal
       order = 0
       parent = child4
-      command = sudo watch "netstat -tulpn"
-    [[[terminal6]]]
-      profile = default
-      type = Terminal
-      order = 1
-      parent = child4
-      command = sudo tail -f /var/log/everything.log
-    [[[terminal9]]]
-      profile = default
-      type = Terminal
-      order = 1
-      parent = child7
       command = bwm-ng
-    [[[terminal8]]]
+    [[[terminal5]]]
+      type = Terminal
+      order = 1
+      parent = child4
+      command = sudo iotop -o
+  [[New Layout]]
+    [[[child0]]]
+      position = 0:19
+      type = Window
+      order = 0
+      parent = ""
+      size = 1920, 1047
+    [[[terminal1]]]
       profile = default
       type = Terminal
       order = 0
-      parent = child7
-      command = sudo iotop -o
+      parent = child0
+      command = ""
 [plugins]

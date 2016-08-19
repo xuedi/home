@@ -36,7 +36,7 @@ pcmanfm -d &
 fcitx &
 owncloud &
 if [ "$HOSTNAME" = snowfield ]; then
-	wicd-gtk --tray &
+    wicd-gtk --tray &
 else
     conky &
 fi
