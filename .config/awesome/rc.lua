@@ -91,7 +91,7 @@ end
 -- Define a tag table which hold all screen tags.
 tags = {
   names  = { "terminal", "browser", "dev", "text", "folders", "media", "photos", "status", "crypto", "chat", "email", "games", "p2p", "vm"},
-  layout = { layouts[1], layouts[4], layouts[4], layouts[1], layouts[1],layouts[1], layouts[1], layouts[1], layouts[1], layouts[1], layouts[1], layouts[3], layouts[4], layouts[4] }
+  layout = { layouts[1], layouts[4], layouts[4], layouts[1], layouts[1],layouts[1], layouts[1], layouts[1], layouts[1], layouts[1], layouts[1], layouts[4], layouts[4], layouts[4] }
 }
 for s = 1, screen.count() do
   -- Each screen has its own tag table.
@@ -587,4 +587,4 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- }}}
 
 -- xuedi: spacer for conky
-mystatusbar = awful.wibox({ position = "bottom", screen = 1, ontop = false, width = 1, height = 14 })
+--mystatusbar = awful.wibox({ position = "bottom", screen = 1, ontop = false, width = 1, height = 14 })

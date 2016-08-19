@@ -15,36 +15,27 @@ export GNOME_KEYRING_CONTROL
 export GNOME_KEYRING_PID
 export XDG_CURRENT_DESKTOP=GNOME
 
-
 ### Fix mouse speed for G402
 if [ -f ~/bin/mouse.sh ]; then
     bash ~/bin/mouse.sh
 fi
 
-
-### Wallpaper
-feh --bg-scale ~/.config/awesome/themes/bg.jpg
-
-
 ### Custom keys (.xbindkeysrc)
 xbindkeys &
-
 
 ### Common Stuff
 pnmixer &
 pcmanfm -d &
 fcitx &
-owncloud &
+#owncloud &
 if [ "$HOSTNAME" = snowfield ]; then
     wicd-gtk --tray &
 else
-    conky &
+    #conky &
 fi
-
 
 ### SystemDefaults
 source /etc/X11/xinit/xinitrc.d/50-systemd-user.sh
-
 
 ### Start WM
 exec awesome
