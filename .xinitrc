@@ -31,14 +31,13 @@ xbindkeys &
 
 
 ### Common Stuff
+pnmixer &
 pcmanfm -d &
 fcitx &
 owncloud &
 if [ "$HOSTNAME" = snowfield ]; then
 	wicd-gtk --tray &
-    volti &
 else
-    pavucontrol &
     conky &
 fi
 
