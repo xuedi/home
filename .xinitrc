@@ -41,6 +41,7 @@ pcmanfm -d &
 #owncloud &
 if [ "$HOSTNAME" = snowfield ]; then
     wicd-gtk --tray &
+    cbatticon &
 fi
 
 
