@@ -26,3 +26,4 @@ alias ll='ls -l'
 alias du='du -kh'       # Makes a more readable output.
 alias df='df -kTh'
 alias netstat='sudo netstat -tulpn'
+alias 雪地='ponysay 雪地很厉害'

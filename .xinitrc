@@ -38,7 +38,7 @@ ibus-daemon -drx
 ### Common Stuff
 pnmixer &
 pcmanfm -d &
-#owncloud &
+owncloud &
 if [ "$HOSTNAME" = snowfield ]; then
     wicd-gtk --tray &
     cbatticon &
