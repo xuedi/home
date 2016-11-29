@@ -17,10 +17,10 @@ export GNOME_KEYRING_PID
 export XDG_CURRENT_DESKTOP=GNOME
 
 
-### Fix mouse speed for G402
-if [ -f ~/bin/mouse.sh ]; then
-    bash ~/bin/mouse.sh
-fi
+### Fix mouse speed for G402 --- Aparently the mous has a button for this ^_^ ... RTFM
+#if [ -f ~/bin/mouse.sh ]; then
+    #bash ~/bin/mouse.sh
+#fi
 
 
 ### Custom keys (.xbindkeysrc)
@@ -40,7 +40,8 @@ pnmixer &
 pcmanfm -d &
 owncloud &
 if [ "$HOSTNAME" = snowfield ]; then
-    wicd-gtk --tray &
+    #wicd-gtk --tray &
+    nm-applet &
     cbatticon &
 fi
 
