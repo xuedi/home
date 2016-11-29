@@ -185,7 +185,7 @@ xmenu = {
   },
   { "games", {
     { "wurm", "/home/xuedi/bin/wurm.sh" },
-    { "steam", "steam" },
+    { "steam", "STEAM_RUNTIME=0 steam" },
     { "desura", "desura" },
     { "minecraft", "minecraft" },
     { "codeweaver", "/opt/cxoffice/bin/cxrun" },
@@ -486,7 +486,7 @@ awful.rules.rules = {
     { rule = { class = "Geeqie" }, properties = { border_width = 1, floating = true }  },
     { rule = { class = "Guake" }, properties = { border_width = 1, floating = true }  },
     { rule = { class = "Vlc" }, properties = { border_width = 1, floating = true } },
-    { rule = { class = "chromium" }, properties = { floating = false, tag = tags[1][2] } },
+    { rule = { class = "Chromium" }, properties = { floating = false, tag = tags[1][2] } },
     { rule = { class = "net-sourceforge-jnlp-runtime-Boot" }, properties = { floating = true } },
     { rule = { class = "Firefox" }, properties = { tag = tags[1][2] } },
     { rule = { class = "HelloJava - NetBeans IDE 7.2.1" }, properties = { tag = tags[1][3] } },
