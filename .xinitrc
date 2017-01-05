@@ -39,11 +39,9 @@ ibus-daemon -drx
 pnmixer &
 pcmanfm -d &
 owncloud &
-if [ "$HOSTNAME" = snowfield ]; then
-    #wicd-gtk --tray &
-    nm-applet &
-    cbatticon &
-fi
+nm-applet &
+cbatticon &
+xfce4-power-manager &
 
 
 ### SystemDefaults
