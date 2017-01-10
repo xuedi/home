@@ -150,12 +150,13 @@ xmenu = {
   },
   { "dev", {
     { "sublime", "subl3" },
-    { "phpstorm", "bash /home/xuedi/bin/phpstorm.sh" },
+    { "phpstorm", "phpstorm" },
     { "codeblocks", "bash /home/xuedi/bin/codeblocks.sh" }}
   },
   { "dev-tools", {
     { "meld", "meld" },
     { "smartgit", "smartgit" },
+    { "kcachegrind", "kcachegrind" },
     { "qcachegrind", "qcachegrind /home/xuedi/projects/web/tmp/xdebug/callgrind.out" },
     { "umongo", "bash /home/xuedi/projects/other/umongo/launch-umongo.sh" },
     { "sqlitebrowser", "sqlitebrowser" },
