@@ -40,7 +40,7 @@ pnmixer &
 pcmanfm -d &
 owncloud &
 nm-applet &
-cbatticon &
+cbatticon -n &
 xfce4-power-manager &
 
 
