@@ -20,6 +20,8 @@ export HISTSIZE=2000
 export HISTFILESIZE=2000
 export GREP_OPTIONS='--color=auto'
 
+### Dateformat
+export TIME_STYLE=long-iso
 
 #---xuedi---
 alias ll='ls -l'
