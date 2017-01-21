@@ -1,91 +1,95 @@
 [global_config]
-  handle_size = 1
+  always_split_with_profile = True
   enabled_plugins = LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
-  geometry_hinting = False
-  title_transmit_bg_color = "#560c0c"
+  handle_size = 1
+  scroll_tabbar = True
   tab_position = hidden
   title_inactive_bg_color = "#646464"
+  title_transmit_bg_color = "#560c0c"
+  window_state = maximise
 [keybindings]
-[profiles]
-  [[default]]
-    background_image = None
-    background_darkness = 0.91
-    scrollback_lines = 5000
-    background_type = transparent
-    scrollbar_position = hidden
-    foreground_color = "#656763"
-    icon_bell = False
-    show_titlebar = False
-    background_color = "#1c1c1c"
 [layouts]
   [[default]]
     [[[child1]]]
-      type = Terminal
       parent = window0
       profile = default
+      type = Terminal
     [[[window0]]]
-      type = Window
       parent = ""
-  [[status]]
-    [[[child0]]]
       type = Window
-      order = 0
-      parent = ""
-    [[[child1]]]
-      type = HPaned
-      order = 0
-      parent = child0
-    [[[child2]]]
-      type = VPaned
-      order = 0
-      parent = child1
-    [[[child3]]]
-      type = VPaned
-      order = 1
-      parent = child1
-    [[[child4]]]
-      type = VPaned
-      order = 1
-      parent = child3
-    [[[terminal1]]]
-      type = Terminal
-      order = 0
-      parent = child2
-      command = htop
-      profile = default
-    [[[terminal2]]]
-      type = Terminal
-      order = 1
-      parent = child2
-      command = echo test
-    [[[terminal3]]]
-      type = Terminal
-      order = 0
-      parent = child3
-      command = 'sudo watch "netstat -tulpn"'
-      profile = default
-      size = 500, 300
-    [[[terminal4]]]
-      type = Terminal
-      order = 0
-      parent = child4
-      command = bwm-ng
-    [[[terminal5]]]
-      type = Terminal
-      order = 1
-      parent = child4
-      command = sudo iotop -o
   [[New Layout]]
     [[[child0]]]
-      position = 0:19
-      type = Window
       order = 0
       parent = ""
+      position = 0:19
       size = 1920, 1047
+      type = Window
     [[[terminal1]]]
-      profile = default
-      type = Terminal
+      command = ""
       order = 0
       parent = child0
-      command = ""
+      profile = default
+      type = Terminal
+  [[status]]
+    [[[child0]]]
+      order = 0
+      parent = ""
+      type = Window
+    [[[child1]]]
+      order = 0
+      parent = child0
+      type = HPaned
+    [[[child2]]]
+      order = 0
+      parent = child1
+      type = VPaned
+    [[[child3]]]
+      order = 1
+      parent = child1
+      type = VPaned
+    [[[child4]]]
+      order = 1
+      parent = child3
+      type = VPaned
+    [[[terminal1]]]
+      command = htop
+      order = 0
+      parent = child2
+      profile = default
+      type = Terminal
+    [[[terminal2]]]
+      command = echo test
+      order = 1
+      parent = child2
+      type = Terminal
+    [[[terminal3]]]
+      command = 'sudo watch "netstat -tulpn"'
+      order = 0
+      parent = child3
+      profile = default
+      size = 500, 300
+      type = Terminal
+    [[[terminal4]]]
+      command = bwm-ng
+      order = 0
+      parent = child4
+      type = Terminal
+    [[[terminal5]]]
+      command = sudo iotop -o
+      order = 1
+      parent = child4
+      type = Terminal
 [plugins]
+[profiles]
+  [[default]]
+    background_color = "#1c1c1c"
+    background_darkness = 0.91
+    background_type = transparent
+    cursor_color = "#656763"
+    cursor_shape = ibeam
+    foreground_color = "#656763"
+    icon_bell = False
+    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
+    scrollback_lines = 5000
+    scrollbar_position = hidden
+    show_titlebar = False
