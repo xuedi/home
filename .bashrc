@@ -2,7 +2,6 @@
 # Check for an interactive session
 [ -z "$PS1" ] && return
 
-alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 
 ### bugfix ###
@@ -23,10 +22,14 @@ export GREP_OPTIONS='--color=auto'
 ### Dateformat
 export TIME_STYLE=long-iso
 
-#---xuedi---
-alias ll='ls -l'
-alias du='du -kh'       # Makes a more readable output.
+### some alias
+alias ll='ls -l --color=auto'
+alias du='du -kh'
 alias df='df -kTh'
 alias netstat='sudo netstat -tulpn'
 alias 雪地='ponysay 雪地很厉害'
 alias steam='STEAM_RUNTIME=0 steam'
+
+### fixex complaining grep
+alias grep="/usr/bin/grep $GREP_OPTIONS"
+unset GREP_OPTIONS
