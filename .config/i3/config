@@ -191,5 +191,8 @@ bindsym Mod4+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3status
+        position top
 }
 
+exec --no-startup-id nm-applet
+exec --no-startup-id feh --bg-fill ~/.config/awesome/themes/zenburn/zenburn-background.png

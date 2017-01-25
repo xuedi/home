@@ -17,7 +17,7 @@ export GNOME_KEYRING_PID
 export XDG_CURRENT_DESKTOP=GNOME
 
 
-### Fix mouse speed for G402 --- Aparently the mous has a button for this ^_^ ... RTFM
+### Fix mouse speed for G402 --- Apparently the mouse has a button for this ^_^ ... RTFM
 #if [ -f ~/bin/mouse.sh ]; then
     #bash ~/bin/mouse.sh
 #fi
@@ -39,7 +39,7 @@ ibus-daemon -drx
 pnmixer &
 pcmanfm -d &
 owncloud &
-nm-applet &
+#nm-applet &
 cbatticon -n &
 xfce4-power-manager &
 
