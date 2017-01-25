@@ -123,27 +123,36 @@ bindsym Mod4+Shift+1 move container to workspace 1: term
 bindsym Mod4+Shift+2 move container to workspace 2: web
 bindsym Mod4+Shift+3 move container to workspace 3: dev
 bindsym Mod4+Shift+4 move container to workspace 4: dir
-bindsym Mod4+Shift+5 move container to workspace 5: mail
+bindsym Mod4+Shift+5 move container to workspace 5: com
 bindsym Mod4+Shift+6 move container to workspace 6: sfx
 bindsym Mod4+Shift+7 move container to workspace 7: gfx
 bindsym Mod4+Shift+8 move container to workspace 8: sys
 bindsym Mod4+Shift+9 move container to workspace 9: gmz
 bindsym Mod4+Shift+0 move container to workspace 0: sec
 
-# bind stuff
+# bind stuff (xprop)
+assign [class="URxvt"] → 1: term
 assign [class="Terminator"] → 1: term
+assign [class="Firefox"] → 2: web
 assign [class="Chromium"] → 2: web
 assign [class="Subl3"] → 3: dev
 assign [class="SmartGit"] → 3: dev
 assign [class="Pcmanfm"] → 4: dir
-assign [class="Thunderbird"] → 5: mail
+assign [class="Pidgin"] → 5: com
+assign [class="Thunderbird"] → 5: com
 assign [class="jetbrains-phpstorm"] → 3: dev
 assign [class="banshee"] → 6: sfx
+assign [class="gogglesmm"] → 6: sfx
+assign [class="MPlayer"] → 7: gfx
 assign [class="VLC media playerpc"] → 7: gfx
 assign [class="Gimp"] → 7: gfx
 assign [class="Shotwell"] → 7: gfx
 assign [class="Virtualbox"] → 8: sys
+assign [class="Palimpsest"] → 8: sys
+assign [class="Terminator-status"] → 8: sys
 assign [class="Deluge"] → 8: sys
+assign [class="Zenmap"] → 0: sec
+
 
 # reload the configuration file
 bindsym Mod4+Shift+c reload
