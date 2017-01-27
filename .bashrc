@@ -22,6 +22,9 @@ export GREP_OPTIONS='--color=auto'
 ### Dateformat
 export TIME_STYLE=long-iso
 
+### keymap
+setxkbmap de
+
 ### some alias
 alias ll='ls -l --color=auto'
 alias du='du -kh'
