@@ -23,7 +23,7 @@ export GREP_OPTIONS='--color=auto'
 export TIME_STYLE=long-iso
 
 ### keymap
-setxkbmap de
+sudo loadkeys de-latin1
 
 ### some alias
 alias ll='ls -l --color=auto'
