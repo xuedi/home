@@ -21,16 +21,12 @@ bindsym Mod4+d exec dmenu_run
 bindsym Mod4+r exec i3-dmenu-desktop
 
 # change focus on workspace
-bindsym Mod4+$left focus left
-bindsym Mod4+$down focus down
-bindsym Mod4+$up focus up
-bindsym Mod4+$right focus right
+bindsym Mod4+Left  workspace prev
+bindsym Mod4+Right workspace next
 
 # move workspace to outputs
-bindsym Mod4+Shift+Left  workspace prev
 bindsym Mod4+Shift+Down  move workspace to output down
 bindsym Mod4+Shift+Up    move workspace to output up
-bindsym Mod4+Shift+Right move workspace to output right
 
 # split in horizontal orientation
 bindsym Mod4+h split h
@@ -122,8 +118,14 @@ bindsym Mod4+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 bar {
-        status_command i3status
-        position top
+	#status_command i3status
+	status_command i3blocks -c ~/.config/i3/blocks.conf
+	position top
+	colors {
+		separator #268bd2
+		background #002b36
+		statusline #839496
+	}
 }
 
 # Some auto start apps. TODO: move all stuff from .xinit here
@@ -131,6 +133,4 @@ exec --no-startup-id terminator
 exec --no-startup-id nm-applet
 exec --no-startup-id pnmixer
 exec --no-startup-id pcmanfm -d
-exec --no-startup-id cbatticon -n
-exec --no-startup-id cbatticon -n
 exec --no-startup-id feh --bg-fill ~/.config/awesome/themes/zenburn/zenburn-background.png
