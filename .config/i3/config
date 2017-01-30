@@ -118,8 +118,8 @@ bindsym Mod4+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 bar {
-	#status_command i3status
-	status_command i3blocks -c ~/.config/i3/blocks.conf
+	status_command i3status
+	#status_command i3blocks -c ~/.config/i3/blocks.conf
 	position top
 	colors {
 		separator #268bd2
