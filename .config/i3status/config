@@ -17,7 +17,7 @@ order += "run_watch VPN"
 order += "wireless _first_"
 order += "battery 0"
 order += "tztime local"
-order += "volume"
+
 
 wireless _first_ {
 	format_up = "Wifi: (%quality at %essid) %ip"
@@ -42,7 +42,7 @@ run_watch VPN {
 }
 
 tztime local {
-	format = "%Y-%m-%d %H:%M:%S"
+	format = "%Y-%m-%d %H:%M"
 }
 
 load {
