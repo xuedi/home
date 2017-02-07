@@ -35,18 +35,10 @@ export QT_IM_MODULE=ibus
 ibus-daemon -drx
 
 
-### Common Stuff
-#pnmixer &
-#pcmanfm -d &
-#owncloud &
-#nm-applet &
-#cbatticon -n &
-#xfce4-power-manager &
-
-
 ### hugo extrernal screen
 if [ "$HOSTNAME" = hugo ]; then
 	xrandr --output eDP1 --primary --auto --output DP1 --above eDP1 --auto
+	docker start mysql vgldev
 fi
 
 ### snowfield

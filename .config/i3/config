@@ -132,5 +132,8 @@ bar {
 exec --no-startup-id terminator
 exec --no-startup-id nm-applet
 exec --no-startup-id pnmixer
-exec --no-startup-id pcmanfm -d
+exec --no-startup-id pcmanfm
+exec --no-startup-id chromium
+exec --no-startup-id phpstorm
+exec --no-startup-id thunderbird
 exec --no-startup-id feh --bg-fill ~/.config/awesome/themes/zenburn/zenburn-background.png
