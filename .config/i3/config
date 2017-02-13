@@ -16,6 +16,9 @@ bindsym Mod4+Return exec terminator
 # kill focused window
 bindsym Mod4+Shift+q kill
 
+# screenshot on print
+bindsym Print exec scrot '%Y-%m-%d_%I:%M:%S.png' -z -u -q 85 -e 'mv $f ~/downloads/screenshots'
+
 # start dmenu (a program launcher)
 bindsym Mod4+d exec dmenu_run
 bindsym Mod4+r exec i3-dmenu-desktop
