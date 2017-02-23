@@ -36,3 +36,5 @@ alias steam='STEAM_RUNTIME=0 steam'
 ### fixex complaining grep
 alias grep="/usr/bin/grep $GREP_OPTIONS"
 unset GREP_OPTIONS
+
+exec fish
