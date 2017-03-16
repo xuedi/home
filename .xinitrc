@@ -28,6 +28,10 @@ xbindkeys &
 setxkbmap de
 
 
+### notifications (yaourt -S notification-daemon)
+/usr/lib/notification-daemon-1.0/notification-daemon &
+
+
 ### Input system
 export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
@@ -38,7 +42,7 @@ ibus-daemon -drx
 ### hugo extrernal screen
 if [ "$HOSTNAME" = hugo ]; then
 	xrandr --output eDP1 --primary --auto --output DP1 --above eDP1 --auto
-	docker start mysql vgldev
+	docker start mysql vgldev-nginx
 fi
 
 
@@ -47,5 +51,4 @@ source /etc/X11/xinit/xinitrc.d/50-systemd-user.sh
 
 
 ### Start WM
-#exec awesome
 exec i3
