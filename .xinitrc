@@ -8,6 +8,10 @@ if test -z "$DBUS_SESSION_BUS_ADDRESS"; then
 fi
 
 
+### path settings
+set PATH $PATH /home/xuedi/bin
+
+
 ### Keyring double check
 eval $(/usr/bin/gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh)
 export SSH_AUTH_SOCK
@@ -44,6 +48,10 @@ if [ "$HOSTNAME" = hugo ]; then
 	xrandr --output eDP1 --primary --auto --output DP1 --above eDP1 --auto
 	docker start mysql vgldev-nginx
 fi
+
+
+### basic software
+insync start
 
 
 ### SystemDefaults
