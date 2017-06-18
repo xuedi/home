@@ -90,6 +90,7 @@ assign [class="URxvt"] 				→ 1: term
 assign [class="Terminator"] 		→ 1: term
 assign [class="Firefox"] 			→ 2: web
 assign [class="Chromium"] 			→ 2: web
+assign [class="Vivaldi-stable"]		→ 2: web
 assign [class="jetbrains-phpstorm"] → 3: dev
 assign [class="Pcmanfm"] 			→ 4: dir
 assign [class="skypeforlinux"]		→ 5: com
@@ -134,5 +135,4 @@ bar {
 exec --no-startup-id terminator
 exec --no-startup-id nm-applet
 exec --no-startup-id pnmixer
-exec --no-startup-id bash ~/bin/chromium.sh
 exec --no-startup-id feh --bg-fill ~/.config/awesome/themes/zenburn/zenburn-background.png
