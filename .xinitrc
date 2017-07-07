@@ -46,7 +46,7 @@ ibus-daemon -drx
 ### hugo extrernal screen
 if [ "$HOSTNAME" = hugo ]; then
 	xrandr --output eDP1 --primary --auto --output DP1 --above eDP1 --auto
-	docker start mysql vgldev-nginx
+	docker start vgl-db vgl-php vgl-nginx
 fi
 
 

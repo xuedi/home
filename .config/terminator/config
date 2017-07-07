@@ -4,7 +4,7 @@
   handle_size = 1
   scroll_tabbar = True
   tab_position = hidden
-  title_hide_sizetext = True
+  title_font = Consolas 10
   title_inactive_bg_color = "#646464"
   title_transmit_bg_color = "#560c0c"
   window_state = maximise
@@ -88,10 +88,12 @@
     background_type = transparent
     cursor_color = "#656763"
     cursor_shape = ibeam
+    font = Monaco 11
     foreground_color = "#656763"
     icon_bell = False
     palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
     scroll_on_keystroke = False
-    scrollback_lines = 5000
+    scrollback_lines = 50000
     scrollbar_position = hidden
     show_titlebar = False
+    use_system_font = False
