@@ -21,7 +21,7 @@ bindsym Print exec scrot '%Y-%m-%d_%I:%M:%S.png' -z -u -q 85 -e 'mv $f ~/downloa
 
 # start dmenu (a program launcher)
 bindsym Mod4+d exec dmenu_run
-bindsym Mod4+r exec i3-dmenu-desktop
+#bindsym Mod4+r exec i3-dmenu-desktop
 
 # change focus on workspace
 bindsym Mod4+Left  workspace prev
@@ -130,6 +130,22 @@ bar {
 		statusline #839496
 	}
 }
+
+# resize mode
+bindsym Mod4+r mode "resize"
+mode "resize" {
+
+        # resize
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+
+        # back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
 
 # Some auto start apps. TODO: move all stuff from .xinit here
 exec --no-startup-id terminator
