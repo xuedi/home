@@ -26,7 +26,7 @@ export TIME_STYLE=long-iso
 sudo loadkeys de-latin1
 
 ### some alias
-alias ll='exa -bghHliS'
+alias ll='exa -bghHliS --git'
 alias du='du -kh'
 alias df='df -kTh'
 alias netstat='sudo netstat -tulpn'
