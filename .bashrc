@@ -38,5 +38,9 @@ alias grep="/usr/bin/grep $GREP_OPTIONS"
 unset GREP_OPTIONS
 
 export PATH="${PATH}:/home/xuedi/bin"
+export PATH="${PATH}:/home/xuedi/.cargo/bin"
+
+### yaourt -S pkgfile
+source /usr/share/doc/pkgfile/command-not-found.bash
 
 #exec fish
