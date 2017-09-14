@@ -2,5 +2,4 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
-export LC_TIME=sv
-
+export PATH="$HOME/.cargo/bin:$PATH"
