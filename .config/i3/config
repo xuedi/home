@@ -1,4 +1,3 @@
-
 # i3 config file (v4)
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
@@ -119,10 +118,9 @@ bindsym Mod4+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym Mod4+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
-# Start i3bar to display a workspace bar (plus the system information i3status
+# Start i3bar to display a workspace bar (https://github.com/greshake/i3status-rust)
 bar {
-	# https://github.com/ultrabug/py3status
-	status_command py3status -c ~/.config/i3/py3status.conf
+	status_command /usr/bin/i3status-rs /home/xuedi/.config/i3/status.toml
 	position top
 	colors {
 		separator #268bd2

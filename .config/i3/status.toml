@@ -1,0 +1,67 @@
+theme = "solarized-dark"
+icons = "awesome"
+
+
+[[block]]
+block = "disk_space"
+path = "/"
+alias = ""
+info_type = "available"
+unit = "GB"
+interval = 45
+
+[[block]]
+block = "memory"
+display_type = "memory"
+format_mem = "{Mup}%"
+clickable = false
+interval = 1
+
+[[block]]
+block = "memory"
+display_type = "swap"
+format_swap = "{SUp}%"
+clickable = false
+warning_swap = 10
+critical_swap = 25
+interval = 30
+
+[[block]]
+block = "cpu"
+interval = 1
+
+[[block]]
+block = "load"
+interval = 1
+format = "{1m}"
+
+[[block]]
+block = "temperature"
+interval = 10
+collapsed = false
+
+[[block]]
+block = "battery"
+interval = 10
+
+# %quality  %essid  %bitrate  %ip  
+[[block]]
+block = "custom"
+interval = 100
+cycle = [
+	"echo -n ' ' ; cat /proc/net/wireless | sed 1,2d | awk '{print $3}' | tr -d '\n.' ; echo -n '% ' ; iwgetid -r | tr -d '\n' ; echo -n '  1200MB'",
+	"echo -n ' ' ; hostname -i | awk '{print $1}'", 
+]
+on_click = "<command>"
+
+#[[block]]
+#block = "pacman"
+
+[[block]]
+block = "sound"
+
+[[block]]
+block = "time"
+interval = 30
+format = "%Y-%m-%d %H:%M"
+
