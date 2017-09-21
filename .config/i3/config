@@ -120,14 +120,27 @@ bindsym Mod4+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 # Start i3bar to display a workspace bar (https://github.com/greshake/i3status-rust)
 bar {
+	font pango:Hasklug Nerd Font, Icons 10
 	status_command /usr/bin/i3status-rs /home/xuedi/.config/i3/status.toml
 	position top
+#	output eDP1
 	colors {
 		separator #268bd2
 		background #002b36
 		statusline #839496
 	}
 }
+
+# no status on extended monitor
+#bar {
+#	position top
+#	output DP1
+#	colors {
+#		separator #268bd2
+#		background #002b36
+#		statusline #839496
+#	}
+#}
 
 # resize mode
 bindsym Mod4+r mode "resize"
