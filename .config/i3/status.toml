@@ -3,12 +3,37 @@ icons = "awesome"
 
 
 [[block]]
+block = "time"
+interval = 30
+format = "%Y-%m-%d %H:%M"
+
+[[block]]
 block = "disk_space"
 path = "/"
 alias = ""
 info_type = "available"
 unit = "GB"
 interval = 45
+
+[[block]]
+block = "custom"
+interval = 30
+on_click = "<command>"
+cycle = [
+	"echo -n ' ' ; cat /proc/net/wireless | sed 1,2d | awk '{print $3}' | tr -d '\n.' ; echo -n '% ' ; iwgetid -r | tr -d '\n' ; echo -n '  ' ; iwconfig $(iwgetid | awk '{print $1}') | sed -n 3p | awk '{print $2, $3}' | tr -d 'BitRae=\n'",
+	"echo -n ' ' ; hostname -i | awk '{print $1}'", 
+]
+
+#[[block]]
+#block = "net"
+#interval = 1
+#graph = false
+
+[[block]]
+block = "xrandr"
+interval = 2
+icons = true
+resolution = false
 
 [[block]]
 block = "memory"
@@ -29,6 +54,9 @@ interval = 30
 [[block]]
 block = "cpu"
 interval = 1
+#info = 60
+#warning = 80
+#critical = 90
 
 [[block]]
 block = "load"
@@ -44,24 +72,10 @@ collapsed = false
 block = "battery"
 interval = 10
 
-# %quality  %essid  %bitrate  %ip  
-[[block]]
-block = "custom"
-interval = 100
-cycle = [
-	"echo -n ' ' ; cat /proc/net/wireless | sed 1,2d | awk '{print $3}' | tr -d '\n.' ; echo -n '% ' ; iwgetid -r | tr -d '\n' ; echo -n '  1200MB'",
-	"echo -n ' ' ; hostname -i | awk '{print $1}'", 
-]
-on_click = "<command>"
-
 #[[block]]
 #block = "pacman"
 
 [[block]]
 block = "sound"
 
-[[block]]
-block = "time"
-interval = 30
-format = "%Y-%m-%d %H:%M"
 

@@ -4,7 +4,7 @@
 #
 
 # Font setting for unicode
-font pango:DejaVu Sans Mono 8
+font pango:Hasklug Nerd Font, Icons 9
 
 # use Mouse+Mod4 to drag floating windows to their wanted position
 floating_modifier Mod4
@@ -148,5 +148,5 @@ mode "resize" {
 # Some auto start apps. TODO: move all stuff from .xinit here
 exec --no-startup-id terminator
 exec --no-startup-id nm-applet
-exec --no-startup-id pnmixer
+#exec --no-startup-id pnmixer
 exec --no-startup-id feh --bg-fill ~/.config/awesome/themes/zenburn/zenburn-background.png

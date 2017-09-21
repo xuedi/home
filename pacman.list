@@ -1,1 +1,36 @@
-pkgfile   # for command not found
+
+
+
+### for command not found
+pkgfile
+
+
+### i3 bar
+awesome-terminal-fonts 
+nerd-fonts-complete
+powerline-fonts
+noto-fonts
+opendesktop-fonts
+ttf-font-icons
+ttf-arphic-ukai
+ttf-baekmuk
+ttf-bitstream-vera
+ttf-dejavu
+ttf-freefont
+ttf-hannom
+ttf-khmer
+ttf-linux-libertine
+ttf-tibetan-machine
+ttf-ubraille
+ttf-anonymous-pro
+ttf-droid
+ttf-inconsolata
+ttf-liberation
+ttf-roboto
+ttf-symbola
+ttf-font-awesome
+ttf-font-icons
+ttf-iosevka-ss01
+ttf-mac-fonts
+ttf-monaco  # the shit !!!
+ttf-twemoji-color
