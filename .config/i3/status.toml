@@ -47,7 +47,7 @@ block = "memory"
 display_type = "swap"
 format_swap = "{SUp}%"
 clickable = false
-warning_swap = 10
+warning_swap = 2
 critical_swap = 25
 interval = 30
 
