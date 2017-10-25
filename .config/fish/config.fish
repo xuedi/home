@@ -1,4 +1,4 @@
-alias ll='ls -l --color=auto'
+alias ll='exa -bghHliS --git'
 alias du='du -kh'
 alias df='df -kTh'
 alias netstat='sudo netstat -tulpn'
