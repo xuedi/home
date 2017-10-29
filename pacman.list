@@ -1,4 +1,5 @@
 
+pacman -Qe > /home/xuedi/pacman-pollux.txt
 
 
 pkgfile # command not found
@@ -10,8 +11,14 @@ ncdu
 
 
 
+### gtk-settings
+lxappearance
 
-### i3 bar
+
+
+pulsemixer
+
+
 awesome-terminal-fonts 
 nerd-fonts-complete
 powerline-fonts
