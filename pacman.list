@@ -4,6 +4,8 @@
 ### for command not found
 pkgfile
 
+firewall gufw
+
 
 ### i3 bar
 awesome-terminal-fonts 
