@@ -43,4 +43,4 @@ export PATH="${PATH}:/home/xuedi/.cargo/bin"
 ### yaourt -S pkgfile
 source /usr/share/doc/pkgfile/command-not-found.bash
 
-#exec fish
+exec fish
