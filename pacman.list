@@ -1,10 +1,14 @@
 
 
 
-### for command not found
-pkgfile
+pkgfile # command not found
 
-firewall gufw
+gufw # firewall
+deepin-system-monitor
+htop 
+ncdu
+
+
 
 
 ### i3 bar
