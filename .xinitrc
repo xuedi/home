@@ -50,6 +50,14 @@ if [ "$HOSTNAME" = hugo ]; then
 fi
 
 
+### pollux no battery, custom bar
+if [ "$HOSTNAME" = pollux ]; then
+	cp /home/xuedi/.config/i3/status_pollux.toml /home/xuedi/.config/i3/status.toml
+else
+	cp /home/xuedi/.config/i3/status_vanilla.toml /home/xuedi/.config/i3/status.toml
+fi
+
+
 ### basic software
 insync start
 

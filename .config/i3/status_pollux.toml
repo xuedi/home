@@ -1,0 +1,68 @@
+theme = "solarized-dark"
+icons = "awesome"
+
+
+[[block]]
+block = "time"
+interval = 30
+format = "%Y-%m-%d %H:%M"
+
+[[block]]
+block = "disk_space"
+path = "/"
+alias = ""
+info_type = "available"
+unit = "GB"
+interval = 45
+
+[[block]]
+block = "custom"
+interval = 30
+on_click = "<command>"
+cycle = [
+	"echo -n ' ' ; hostname -i | awk '{print $1}'", 
+]
+
+[[block]]
+block = "xrandr"
+interval = 2
+icons = true
+resolution = false
+
+[[block]]
+block = "memory"
+display_type = "memory"
+format_mem = "{Mup}%"
+clickable = false
+interval = 1
+
+[[block]]
+block = "memory"
+display_type = "swap"
+format_swap = "{SUp}%"
+clickable = false
+warning_swap = 2
+critical_swap = 25
+interval = 30
+
+[[block]]
+block = "cpu"
+interval = 1
+#info = 60
+#warning = 80
+#critical = 90
+
+[[block]]
+block = "load"
+interval = 1
+format = "{1m}"
+
+[[block]]
+block = "temperature"
+interval = 10
+collapsed = false
+
+[[block]]
+block = "sound"
+
+
