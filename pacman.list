@@ -1,24 +1,12 @@
-
 pacman -Qe > /home/xuedi/pacman-pollux.txt
 
-
-pkgfile # command not found
-
-gufw # firewall
+pkgfile
+gufw
 deepin-system-monitor
 htop 
 ncdu
-
-
-
-### gtk-settings
 lxappearance
-
-
-
 pulsemixer
-
-
 awesome-terminal-fonts 
 nerd-fonts-complete
 powerline-fonts
@@ -45,5 +33,5 @@ ttf-font-awesome
 ttf-font-icons
 ttf-iosevka-ss01
 ttf-mac-fonts
-ttf-monaco  # the shit !!!
+ttf-monaco
 ttf-twemoji-color
