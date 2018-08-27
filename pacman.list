@@ -1,5 +1,6 @@
 pacman -Qe > /home/xuedi/pacman-pollux.txt
 
+hardinfo
 pkgfile
 gufw
 deepin-system-monitor
