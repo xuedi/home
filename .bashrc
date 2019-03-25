@@ -23,7 +23,7 @@ alias steam='STEAM_RUNTIME=0 steam'
 export PATH="${PATH}:/home/xuedi/bin"
 export PATH="${PATH}:/home/xuedi/bin/go/bin"
 export GOPATH="/home/xuedi/go"
-export GOBIN="/home/xuedi/bin/go/bin/"
+export GOBIN="/home/xuedi/bin/go/"
 
 ### yaourt -S pkgfile
 source /usr/share/doc/pkgfile/command-not-found.bash

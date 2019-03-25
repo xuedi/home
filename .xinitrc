@@ -21,15 +21,8 @@ export GNOME_KEYRING_PID
 export XDG_CURRENT_DESKTOP=GNOME
 
 
-### Fix mouse speed for G402 --- Apparently the mouse has a button for this ^_^ ... RTFM
-#if [ -f ~/bin/mouse.sh ]; then
-    #bash ~/bin/mouse.sh
-#fi
-
-
 ### Custom keys (.xbindkeysrc)
 xbindkeys &
-setxkbmap de
 
 
 ### notifications (yaourt -S notification-daemon)
@@ -41,21 +34,6 @@ export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
 export QT_IM_MODULE=ibus
 ibus-daemon -drx
-
-
-### hugo extrernal screen
-if [ "$HOSTNAME" = hugo ]; then
-	xrandr --output eDP1 --primary --auto --output DP1 --above eDP1 --auto
-	docker start vgl-db vgl-php vgl-nginx
-fi
-
-
-### pollux no battery, custom bar
-if [ "$HOSTNAME" = pollux ]; then
-	cp /home/xuedi/.config/i3/status_pollux.toml /home/xuedi/.config/i3/status.toml
-else
-	cp /home/xuedi/.config/i3/status_vanilla.toml /home/xuedi/.config/i3/status.toml
-fi
 
 
 ### basic software

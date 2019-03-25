@@ -1,2 +1,2 @@
 #!/bin/bash
-/home/xuedi/projects/other/wurm/jre1.7.0_05/bin/javaws /home/xuedi/projects/other/wurm/wurmclient.jnlp
+/home/xuedi/bin/wurm/jre1.8.0_201/bin/javaws /home/xuedi/bin/wurm/wurmclient.jnlp
