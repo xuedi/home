@@ -36,6 +36,14 @@ export QT_IM_MODULE=ibus
 ibus-daemon -drx
 
 
+### pollux no battery, custom bar
+if [ "$HOSTNAME" = athena ]; then
+	cp /home/xuedi/.config/i3/status_athena.toml /home/xuedi/.config/i3/status.toml
+else
+	cp /home/xuedi/.config/i3/status_vanilla.toml /home/xuedi/.config/i3/status.toml
+fi
+
+
 ### basic software
 insync start
 

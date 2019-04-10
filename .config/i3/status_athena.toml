@@ -1,3 +1,4 @@
+### including warnings: i3status-rust-git ###
 theme = "solarized-dark"
 icons = "awesome"
 
@@ -14,6 +15,8 @@ alias = ""
 info_type = "available"
 unit = "GB"
 interval = 45
+#alert = 12.0
+#warning = 10.0
 
 [[block]]
 block = "custom"
