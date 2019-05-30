@@ -11,6 +11,9 @@ export HISTSIZE=1000000
 ### Dateformat
 export TIME_STYLE=long-iso
 
+### Color compiler
+export CCACHE_PATH="/usr/bin"
+
 ### some alias
 alias ll='exa -bghHliS --git --time-style=long-iso'
 alias du='du -kh'
@@ -24,6 +27,7 @@ export PATH="${PATH}:/home/xuedi/bin"
 export PATH="${PATH}:/home/xuedi/bin/go/bin"
 export GOPATH="/home/xuedi/go"
 export GOBIN="/home/xuedi/bin/go/"
+export PATH="/usr/lib/colorgcc/bin/:$PATH"    # As per usual colorgcc installation, leave unchanged (don't add ccache)
 
 ### yaourt -S pkgfile
 source /usr/share/doc/pkgfile/command-not-found.bash
