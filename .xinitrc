@@ -41,9 +41,19 @@ ibus-daemon -drx
 
 ### pollux no battery, custom bar
 if [ "$HOSTNAME" = athena ]; then
+	export ELM_SCALE=2
+	export GDK_SCALE=2
+	export QT_AUTO_SCREEN_SCALE_FACTOR=2
 	cp /home/xuedi/.config/i3/status_athena.toml /home/xuedi/.config/i3/status.toml
+	xrandr --output DP-2 --scale 1x1
 else
 	cp /home/xuedi/.config/i3/status_vanilla.toml /home/xuedi/.config/i3/status.toml
+fi
+
+
+### spin down backup hard-drisk
+if [ "$HOSTNAME" = edo ]; then
+	sudo hdparm -S 1 /dev/sda
 fi
 
 

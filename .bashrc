@@ -32,10 +32,5 @@ export PATH="/usr/lib/colorgcc/bin/:$PATH"    # As per usual colorgcc installati
 ### yay -S pkgfile
 source /usr/share/doc/pkgfile/command-not-found.bash
 
-### spin down backup hard-drisk
-if [ "$HOSTNAME" = edo ]; then
-	sudo hdparm -S 1 /dev/sda
-fi
-
 ### after all nice settings, fuck bash, use fish is present :-P
 exec fish
