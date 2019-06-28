@@ -62,11 +62,11 @@ bindsym Mod4+Shift+minus move scratchpad
 bindsym Mod4+minus scratchpad show
 
 # switch to workspace
-bindsym Mod4+1 workspace 1: term
+bindsym Mod4+1 workspace 1: trm
 bindsym Mod4+2 workspace 2: web
 bindsym Mod4+3 workspace 3: dev
 bindsym Mod4+4 workspace 4: dir
-bindsym Mod4+5 workspace 5: mail
+bindsym Mod4+5 workspace 5: com
 bindsym Mod4+6 workspace 6: sfx
 bindsym Mod4+7 workspace 7: gfx
 bindsym Mod4+8 workspace 8: sys
@@ -74,7 +74,7 @@ bindsym Mod4+9 workspace 9: gmz
 bindsym Mod4+0 workspace 0: sec
 
 # move focused container to workspace
-bindsym Mod4+Shift+1 move container to workspace 1: term
+bindsym Mod4+Shift+1 move container to workspace 1: trm
 bindsym Mod4+Shift+2 move container to workspace 2: web
 bindsym Mod4+Shift+3 move container to workspace 3: dev
 bindsym Mod4+Shift+4 move container to workspace 4: dir
@@ -86,8 +86,8 @@ bindsym Mod4+Shift+9 move container to workspace 9: gmz
 bindsym Mod4+Shift+0 move container to workspace 0: sec
 
 # bind stuff (xprop)
-assign [class="URxvt"] 				→ 1: term
-assign [class="Terminator"] 		→ 1: term
+assign [class="URxvt"] 				→ 1: trm
+assign [class="Terminator"] 		→ 1: trm
 assign [class="Firefox"] 			→ 2: web
 assign [class="Chromium"] 			→ 2: web
 assign [class="Vivaldi-stable"]		→ 2: web
