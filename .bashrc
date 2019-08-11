@@ -23,11 +23,12 @@ alias 雪地='ponysay 雪地很厉害'
 alias steam='STEAM_RUNTIME=0 steam'
 
 ### path settings
-export PATH="${PATH}:/home/xuedi/bin"
-export PATH="${PATH}:/home/xuedi/bin/go/bin"
 export GOPATH="/home/xuedi/go"
 export GOBIN="/home/xuedi/bin/go/"
+export PATH="${PATH}:/home/xuedi/bin"
+export PATH="${PATH}:/home/xuedi/bin/go/bin"
 export PATH="/usr/lib/colorgcc/bin/:$PATH"    # As per usual colorgcc installation, leave unchanged (don't add ccache)
+export PATH="$PATH:/opt/cuda/bin"
 
 ### yay -S pkgfile
 source /usr/share/doc/pkgfile/command-not-found.bash

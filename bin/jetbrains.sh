@@ -1,2 +1,2 @@
 #!/bin/sh
-/home/xuedi/bin/jetbrains/jetbrains-toolbox
+~/.local/share/JetBrains/Toolbox/bin/jetbrains-toolbox
