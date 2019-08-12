@@ -164,4 +164,4 @@ mode "resize" {
 exec --no-startup-id terminator
 exec --no-startup-id nm-applet
 #exec --no-startup-id pnmixer
-exec --no-startup-id feh --bg-fill ~/.config/awesome/themes/zenburn/zenburn-background.png
+exec --no-startup-id feh --bg-fill ~/.config/i3/wallpaper/lijiang.jpg
