@@ -1,2 +1,2 @@
 #!/bin/sh
-~/.local/share/JetBrains/Toolbox/bin/jetbrains-toolbox
+~/bin/JetBrains/jetbrains-toolbox

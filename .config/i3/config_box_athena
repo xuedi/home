@@ -61,6 +61,30 @@ bindsym Mod4+Shift+minus move scratchpad
 # If there are multiple scratchpad windows, this command cycles through them.
 bindsym Mod4+minus scratchpad show
 
+# reload the configuration file
+bindsym Mod4+Shift+c reload
+
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym Mod4+Shift+r restart
+
+# exit i3 (logs you out of your X session)
+bindsym Mod4+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+# resize mode
+bindsym Mod4+r mode "resize"
+mode "resize" {
+
+        # resize
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+
+        # back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
 # switch to workspace
 bindsym Mod4+1 workspace 1: trm
 bindsym Mod4+2 workspace 2: web
@@ -93,39 +117,29 @@ assign [class="Chromium"] 			→ 2: web
 assign [class="Vivaldi-stable"]		→ 2: web
 assign [class="jetbrains-phpstorm"] → 3: dev
 assign [class="Pcmanfm"] 			→ 4: dir
+assign [class="Thunar"] 			→ 4: dir
+assign [class="Nautilus"] 			→ 4: dir
 assign [class="skypeforlinux"]		→ 5: com
 assign [class="Pidgin"] 			→ 5: com
 assign [class="Thunderbird"] 		→ 5: com
 assign [class="banshee"] 			→ 6: sfx
 assign [class="gogglesmm"] 			→ 6: sfx
+assign [class="Rhythmbox"] 			→ 6: sfx
 assign [class="MPlayer"] 			→ 7: gfx
 assign [class="VLC media playerpc"] → 7: gfx
 assign [class="Gimp"] 				→ 7: gfx
 assign [class="Shotwell"] 			→ 7: gfx
 assign [class="Virtualbox"] 		→ 8: sys
-assign [class="Palimpsest"] 		→ 8: sys
 assign [class="Terminator-status"] 	→ 8: sys
 assign [class="Deluge"] 			→ 8: sys
 assign [class="SmartGit"] 			→ 8: sys
 assign [class="Zenmap"] 			→ 0: sec
 
-
-# reload the configuration file
-bindsym Mod4+Shift+c reload
-
-# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym Mod4+Shift+r restart
-
-# exit i3 (logs you out of your X session)
-bindsym Mod4+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
-
 # Start i3bar to display a workspace bar (https://github.com/greshake/i3status-rust)
 bar {
-	#font pango:Hasklug Nerd Font, Icons 10
 	font pango:DejaVu Sans Mono, FontAwesome 10
-	status_command /usr/bin/i3status-rs /home/xuedi/.config/i3/status.toml
+	status_command /usr/bin/i3status-rs /home/xuedi/.config/i3/status_athena.toml
 	position top
-#	output eDP1
 	colors {
 		separator #268bd2
 		background #002b36
@@ -133,35 +147,12 @@ bar {
 	}
 }
 
-# no status on extended monitor
-#bar {
-#	position top
-#	output DP1
-#	colors {
-#		separator #268bd2
-#		background #002b36
-#		statusline #839496
-#	}
-#}
-
-# resize mode
-bindsym Mod4+r mode "resize"
-mode "resize" {
-
-        # resize
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
-
-        # back to normal: Enter or Escape
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-}
-
-
 # Some auto start apps. TODO: move all stuff from .xinit here
 exec --no-startup-id terminator
-exec --no-startup-id nm-applet
-#exec --no-startup-id pnmixer
+exec --no-startup-id insync start
+exec --no-startup-id blueberry-tray
+exec --no-startup-id thunar
+exec --no-startup-id firefox.sh
+exec --no-startup-id thunderbird.sh
+exec --no-startup-id phpstorm
 exec --no-startup-id feh --bg-fill ~/.config/i3/wallpaper/lijiang.jpg

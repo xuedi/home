@@ -25,7 +25,10 @@ export XDG_CURRENT_DESKTOP=GNOME
 
 
 ### Custom keys (.xbindkeysrc)
-xbindkeys &
+if ! pgrep -x "xbindkeys" > /dev/null # check if already running
+then
+    xbindkeys &
+fi
 
 
 ### notifications (yaourt -S notification-daemon)
@@ -39,26 +42,18 @@ export QT_IM_MODULE=ibus
 ibus-daemon -drx
 
 
-### pollux no battery, custom bar
+### athena
 if [ "$HOSTNAME" = athena ]; then
 	export ELM_SCALE=2
 	export GDK_SCALE=2
 	export QT_AUTO_SCREEN_SCALE_FACTOR=2
-	cp /home/xuedi/.config/i3/status_athena.toml /home/xuedi/.config/i3/status.toml
 	xrandr --output DP-2 --scale 1x1
-else
-	cp /home/xuedi/.config/i3/status_vanilla.toml /home/xuedi/.config/i3/status.toml
 fi
 
-
-### spin down backup hard-drisk
+### edo 
 if [ "$HOSTNAME" = edo ]; then
-	sudo hdparm -S 1 /dev/sda
+	sudo hdparm -S 1 /dev/sda # spin down backup hard-drisk
 fi
-
-
-### basic software
-insync start
 
 
 ### SystemDefaults

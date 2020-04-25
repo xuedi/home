@@ -20,11 +20,10 @@ interval = 45
 
 [[block]]
 block = "custom"
-interval = 30
-on_click = "<command>"
-cycle = [
-	"echo -n ' ' ; hostname -i | awk '{print $1}'", 
-]
+interval = 360
+command = "echo -n ' ' ; hostname -i | awk '{print $1}'"
+on_click = "terminator -x bwm-ng"
+
 
 [[block]]
 block = "xrandr"
@@ -56,14 +55,15 @@ interval = 1
 #critical = 90
 
 [[block]]
+block = "custom"
+command = "echo -n ' ' ; sensors | grep -oP 'CPU Temperature.*' | awk '{print $3+0}' | sed 's/$/°/'"
+interval = 1
+on_click = "status.sh"
+
+[[block]]
 block = "load"
 interval = 1
 format = "{1m}"
-
-[[block]]
-block = "temperature"
-interval = 10
-collapsed = false
 
 [[block]]
 block = "sound"
