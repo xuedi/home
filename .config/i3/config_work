@@ -1,0 +1,179 @@
+# i3 config file (v4)
+#
+# Please see http://i3wm.org/docs/userguide.html for a complete reference!
+#
+
+# Font setting for unicode
+font pango:DejaVu Sans Mono 8
+
+# use Mouse+Mod4 to drag floating windows to their wanted position
+floating_modifier Mod4
+
+# start a terminal
+bindsym Mod4+Return exec terminator
+
+# kill focused window
+bindsym Mod4+Shift+q kill
+
+# screenshot on print
+bindsym Print exec scrot '%Y-%m-%d_%I:%M:%S.png' -z -u -q 85 -e 'mv $f ~/downloads/screenshots'
+
+# start dmenu (a program launcher)
+bindsym Mod4+d exec dmenu_run
+#bindsym Mod4+r exec i3-dmenu-desktop
+
+# change focus on workspace
+bindsym Mod4+Left  workspace prev
+bindsym Mod4+Right workspace next
+
+# move workspace to outputs
+bindsym Mod4+Shift+Down  move workspace to output down
+bindsym Mod4+Shift+Up    move workspace to output up
+bindsym Mod4+Shift+Right move workspace to output right
+bindsym Mod4+Shift+Left  move workspace to output left
+
+# split in horizontal orientation
+bindsym Mod4+h split h
+
+# split in vertical orientation
+bindsym Mod4+v split v
+
+# enter fullscreen mode for the focused container
+bindsym Mod4+f fullscreen toggle
+
+# change container layout (stacked, tabbed, toggle split)
+bindsym Mod4+s layout stacking
+bindsym Mod4+w layout tabbed
+bindsym Mod4+e layout toggle split
+
+# toggle tiling / floating
+bindsym Mod4+Shift+space floating toggle
+
+# change focus between tiling / floating windows
+bindsym Mod4+space focus mode_toggle
+
+# focus the parent container
+bindsym Mod4+a focus parent
+
+# move the currently focused window to the scratchpad
+bindsym Mod4+Shift+minus move scratchpad
+
+# Show the next scratchpad window or hide the focused scratchpad window.
+# If there are multiple scratchpad windows, this command cycles through them.
+bindsym Mod4+minus scratchpad show
+
+# switch to workspace
+bindsym Mod4+1 workspace 1: term
+bindsym Mod4+2 workspace 2: web
+bindsym Mod4+3 workspace 3: dev
+bindsym Mod4+4 workspace 4: dir
+bindsym Mod4+5 workspace 5: mail
+bindsym Mod4+6 workspace 6: subl
+bindsym Mod4+7 workspace 7: gfx
+bindsym Mod4+8 workspace 8: git
+bindsym Mod4+9 workspace 9: teams
+bindsym Mod4+0 workspace 0: chat
+
+workspace "1: term" output eDP-1
+workspace "2: web" output DP-1-2
+workspace "3: dev" output DP-1-1
+workspace "4: dir" output eDP-1
+workspace "5: mail" output eDP-1
+workspace "6: subl" output eDP-1
+workspace "7: gfx" output eDP-1
+workspace "8: git" output eDP-1
+workspace "9: teams" output DP-1-2
+workspace "0: chat" output DP-1-2
+
+# move focused container to workspace
+bindsym Mod4+Shift+1 move container to workspace 1: term
+bindsym Mod4+Shift+2 move container to workspace 2: web
+bindsym Mod4+Shift+3 move container to workspace 3: dev
+bindsym Mod4+Shift+4 move container to workspace 4: dir
+bindsym Mod4+Shift+5 move container to workspace 5: mail
+bindsym Mod4+Shift+6 move container to workspace 6: subl
+bindsym Mod4+Shift+7 move container to workspace 7: gfx
+bindsym Mod4+Shift+8 move container to workspace 8: git
+bindsym Mod4+Shift+9 move container to workspace 9: teams
+bindsym Mod4+Shift+0 move container to workspace 0: chat
+
+# bind stuff (xprop)
+assign [class="Terminator"] 				→ 1: term
+assign [class="Firefox"] 					→ 2: web
+assign [class="Chromium"] 					→ 2: web
+assign [class="jetbrains-phpstorm"] 		→ 3: dev
+assign [class="Pcmanfm"] 					→ 4: dir
+assign [class="Thunderbird"] 				→ 5: mail
+assign [class="Sublime_text"] 				→ 6: subl
+assign [class="Shotwell"] 					→ 7: gfx
+assign [class="SmartGit"] 					→ 8: git
+assign [class="Microsoft Teams - Preview"] 	→ 9: teams
+assign [class="Rocket.Chat"] 				→ 0: chat
+
+
+# reload the configuration file
+bindsym Mod4+Shift+c reload
+
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym Mod4+Shift+r restart
+
+# exit i3 (logs you out of your X session)
+bindsym Mod4+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+# Start i3bar to display a workspace bar (https://github.com/greshake/i3status-rust)
+bar {
+	tray_output primary
+	font pango:DejaVu Sans Mono, FontAwesome 10
+	status_command /home/xuedi/bin/i3status-rs /home/xuedi/.config/i3/status.toml
+	position top
+#	output eDP1
+	colors {
+		separator #268bd2
+		background #002b36
+		statusline #839496
+	}
+}
+
+# no status on extended monitor
+#bar {
+#	position top
+#	output DP1
+#	colors {
+#		separator #268bd2
+#		background #002b36
+#		statusline #839496
+#	}
+#}
+
+# resize mode
+bindsym Mod4+r mode "resize"
+mode "resize" {
+
+        # resize
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+
+        # back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+
+# Some auto start apps. TODO: move all stuff from .xinit here
+exec --no-startup-id terminator
+#exec --no-startup-id rocketchat-desktop
+#exec --no-startup-id owncloud
+exec --no-startup-id wicd-gtk -t
+exec --no-startup-id pnmixer
+#exec --no-startup-id smartgit.sh
+#exec --no-startup-id pcmanfm.sh
+#exec --no-startup-id jetbrains.sh
+exec --no-startup-id firefox.sh
+#exec --no-startup-id phpstorm
+#exec --no-startup-id thunderbird.sh
+#exec --no-startup-id subl
+#exec --no-startup-id teams
+#exec --no-startup-id keepassxc
+exec --no-startup-id feh --bg-fill ~/.config/awesome/themes/zenburn/zenburn-background.png
