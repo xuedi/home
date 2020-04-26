@@ -3,8 +3,14 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 #
 
+# other stuff
+output * bg /home/xuedi/.config/i3/wallpaper/zenburn-background.png fill
+
+# backlight brightness
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set 10%+
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 10%-
+
 # Font setting for unicode
-#font pango:Hasklug Nerd Font, Icons 9  #nerfonts are to big!!
 font pango:DejaVu Sans Mono, FontAwesome 10
 
 # use Mouse+Mod4 to drag floating windows to their wanted position
@@ -20,7 +26,7 @@ bindsym Mod4+Shift+q kill
 bindsym Print exec scrot '%Y-%m-%d_%I:%M:%S.png' -z -u -q 85 -e 'mv $f ~/downloads/screenshots'
 
 # start dmenu (a program launcher)
-bindsym Mod4+d exec dmenu_run
+bindsym Mod4+d exec wofi --show run
 #bindsym Mod4+r exec i3-dmenu-desktop
 
 # change focus on workspace
@@ -110,31 +116,36 @@ bindsym Mod4+Shift+9 move container to workspace 9: gmz
 bindsym Mod4+Shift+0 move container to workspace 0: sec
 
 # bind stuff (xprop)
-assign [class="URxvt"] 				→ 1: trm
-assign [class="Terminator"] 		→ 1: trm
-assign [class="Firefox"] 			→ 2: web
-assign [class="Chromium"] 			→ 2: web
-assign [class="Vivaldi-stable"]		→ 2: web
-assign [class="jetbrains-phpstorm"] → 3: dev
-assign [class="Pcmanfm"] 			→ 4: dir
-assign [class="Thunar"] 			→ 4: dir
-assign [class="Nautilus"] 			→ 4: dir
-assign [class="skypeforlinux"]		→ 5: com
-assign [class="Pidgin"] 			→ 5: com
-assign [class="Thunderbird"] 		→ 5: com
-assign [class="banshee"] 			→ 6: sfx
-assign [class="gogglesmm"] 			→ 6: sfx
-assign [class="Rhythmbox"] 			→ 6: sfx
-assign [class="MPlayer"] 			→ 7: gfx
-assign [class="VLC media playerpc"] → 7: gfx
-assign [class="Gimp"] 				→ 7: gfx
-assign [class="Shotwell"] 			→ 7: gfx
-assign [class="Virtualbox"] 		→ 8: sys
-assign [class="Palimpsest"] 		→ 8: sys
-assign [class="Terminator-status"] 	→ 8: sys
-assign [class="Deluge"] 			→ 8: sys
-assign [class="SmartGit"] 			→ 8: sys
-assign [class="Zenmap"] 			→ 0: sec
+#assign [class="URxvt"] 				→ 1: trm
+#assign [class="Terminator"] 		→ 1: trm
+#
+#assign [class="Chromium"] 			→ 2: web
+#assign [class="Vivaldi-stable"]		→ 2: web
+#assign [class="jetbrains-phpstorm"] → 3: dev
+#assign [class="Pcmanfm"] 			→ 4: dir
+#assign [class="Thunar"] 			→ 4: dir
+#assign [class="Nautilus"] 			→ 4: dir
+#assign [class="skypeforlinux"]		→ 5: com
+#assign [class="Pidgin"] 			→ 5: com
+#assign [class="Thunderbird"] 		→ 5: com
+#assign [class="banshee"] 			→ 6: sfx
+#assign [class="gogglesmm"] 			→ 6: sfx
+#assign [class="Rhythmbox"] 			→ 6: sfx
+#assign [class="MPlayer"] 			→ 7: gfx
+#assign [class="VLC media playerpc"] → 7: gfx
+#assign [class="Gimp"] 				→ 7: gfx
+#assign [class="Shotwell"] 			→ 7: gfx
+#assign [class="Virtualbox"] 		→ 8: sys
+#assign [class="Palimpsest"] 		→ 8: sys
+#assign [class="Terminator-status"] 	→ 8: sys
+#assign [class="Deluge"] 			→ 8: sys
+#assign [class="SmartGit"] 			→ 8: sys
+#assign [class="Zenmap"] 			→ 0: sec
+
+
+assign [app_id="firefox"] 			→ 2: web
+assign [app_id="thunar"] 			→ 4: dir
+
 
 # Start i3bar to display a workspace bar (https://github.com/greshake/i3status-rust)
 bar {
@@ -150,10 +161,10 @@ bar {
 
 # Some auto start apps. TODO: move all stuff from .xinit here
 exec --no-startup-id terminator
-exec --no-startup-id insync start
-exec --no-startup-id blueberry-tray
-exec --no-startup-id thunar
-exec --no-startup-id firefox.sh
-exec --no-startup-id thunderbird.sh
-exec --no-startup-id phpstorm
-exec --no-startup-id feh --bg-fill ~/.config/i3/wallpaper/lijiang.jpg
+#exec --no-startup-id insync start
+#exec --no-startup-id keepassxc
+#exec --no-startup-id blueberry-tray
+#exec --no-startup-id thunar
+#exec --no-startup-id firefox.sh
+#exec --no-startup-id thunderbird.sh
+#exec --no-startup-id phpstorm

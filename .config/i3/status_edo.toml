@@ -8,74 +8,49 @@ interval = 30
 format = "%Y-%m-%d %H:%M"
 
 [[block]]
-block = "disk_space"
-path = "/"
-alias = ""
-info_type = "available"
-unit = "GB"
-interval = 45
+block = "custom"
+command = "echo -n ' ' ; df -h | awk 'NR==4 {print $4}' | tr -d '\n' ; echo -n ' @ ';  sensors nvme-pci-3c00 | awk 'NR==3 {print $2}' | tr -d '.9C\n'"
+interval = 5
 
 [[block]]
 block = "custom"
 interval = 30
-on_click = "<command>"
-cycle = [
-	"echo -n ' ' ; cat /proc/net/wireless | sed 1,2d | awk '{print $3}' | tr -d '\n.' ; echo -n '% ' ; iwgetid -r | tr -d '\n' ; echo -n '  ' ; iwconfig $(iwgetid | awk '{print $1}') | sed -n 3p | awk '{print $2, $3}' | tr -d 'BitRae=\n'",
-	"echo -n ' ' ; hostname -i | awk '{print $1}'", 
-]
-
-#[[block]]
-#block = "net"
-#interval = 1
-#graph = false
-
-[[block]]
-block = "xrandr"
-interval = 2
-icons = true
-resolution = false
+command = "echo -n ' ' ; cat /proc/net/wireless | sed 1,2d | awk '{print $3}' | tr -d '\n.' ; echo -n '% ' ; iwgetid -r | tr -d '\n' ; echo -n '  ' ; iwconfig $(iwgetid | awk '{print $1}') | sed -n 3p | awk '{print $2, $3}' | tr -d 'BitRae=\n'"
 
 [[block]]
 block = "memory"
 display_type = "memory"
 format_mem = "{Mup}%"
 clickable = false
-interval = 1
-
-[[block]]
-block = "memory"
-display_type = "swap"
-format_swap = "{SUp}%"
-clickable = false
-warning_swap = 2
-critical_swap = 25
-interval = 30
+interval = 5
 
 [[block]]
 block = "cpu"
-interval = 1
-#info = 60
-#warning = 80
-#critical = 90
+interval = 2
+
+[[block]]
+block = "custom"
+command = "echo -n ' ' ; sensors | grep -oP 'Package id 0.*' | awk '{print $4}' | tr -d .0C"
+interval = 3
+on_click = "status.sh"
 
 [[block]]
 block = "load"
-interval = 1
+interval = 5
 format = "{1m}"
 
 [[block]]
-block = "temperature"
-interval = 10
-collapsed = false
+block = "custom"
+command = "echo -n ' ' ; acpi | awk '{print $4}' | tr -d ,"
+interval = 5
 
-[[block]]
-block = "battery"
-interval = 10
+#[[block]]
+#block = "battery"
+#interval = 10
 
 #[[block]]
 #block = "pacman"
 
 [[block]]
 block = "sound"
-
 
