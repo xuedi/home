@@ -53,6 +53,7 @@ fi
 ### edo 
 if [ "$HOSTNAME" = edo ]; then
 	sudo hdparm -S 1 /dev/sda # spin down backup hard-drisk
+        export MOZ_ENABLE_WAYLAND=1
 fi
 
 
