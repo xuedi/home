@@ -30,8 +30,5 @@ export PATH="${PATH}:/home/xuedi/bin/go/bin"
 export PATH="/usr/lib/colorgcc/bin/:$PATH"    # As per usual colorgcc installation, leave unchanged (don't add ccache)
 export PATH="$PATH:/opt/cuda/bin"
 
-### yay -S pkgfile
-source /usr/share/doc/pkgfile/command-not-found.bash
-
 ### after all nice settings, fuck bash, use fish is present :-P
 exec fish
