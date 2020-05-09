@@ -20,12 +20,6 @@ command = "echo -n ' ' ; hostname -i | awk '{print $1}'"
 on_click = "terminator -x bwm-ng"
 
 [[block]]
-block = "xrandr"
-interval = 2
-icons = true
-resolution = false
-
-[[block]]
 block = "memory"
 display_type = "memory"
 format_mem = "{Mup}%"
