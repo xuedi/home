@@ -1,11 +1,22 @@
+
+
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
-# golang
-export GOPATH="/home/xuedi/go"
-export GOBIN="/home/xuedi/bin/go"
-export PATH="$PATH:$GOBIN/bin"
 
-export PATH="$PATH:/opt/cuda/bin"
+if [ -d "/opt/cuda/bin" ] ; then
+    PATH="/opt/cuda/bin:$PATH"
+fi
 
+
+if [ -d "$HOME/.go/bin" ] ; then
+    PATH="$HOME/.go/bin:$PATH"
+fi
+
+
+if [ -d "$HOME/.go" ] ; then
+    GOPATH="$HOME/.go"
+fi
+
+# fish: ~/.config/fish/config.fish

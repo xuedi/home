@@ -8,10 +8,6 @@ if test -z "$DBUS_SESSION_BUS_ADDRESS"; then
 fi
 
 
-### path settings
-set PATH $PATH /home/xuedi/bin
-
-
 ### Keyring double check
 eval $(/usr/bin/gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh)
 export SSH_AUTH_SOCK
@@ -33,10 +29,9 @@ fi
 
 
 ### Input system
-export GTK_IM_MODULE=ibus
-export XMODIFIERS=@im=ibus
-export QT_IM_MODULE=ibus
-ibus-daemon -drx
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
 
 
 ### athena
@@ -45,6 +40,7 @@ if [ "$HOSTNAME" = athena ]; then
 	export GDK_SCALE=2
 	export QT_AUTO_SCREEN_SCALE_FACTOR=2
 	xrandr --output DP-2 --scale 1x1
+	xset s off
 fi
 
 ### edo 
