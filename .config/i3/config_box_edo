@@ -161,10 +161,13 @@ bar {
 
 # Some auto start apps. TODO: move all stuff from .xinit here
 exec --no-startup-id terminator
-#exec --no-startup-id insync start
-#exec --no-startup-id keepassxc
+#exec --no-startup-id pasystray --notify=none
+exec --no-startup-id nextcloud
+exec --no-startup-id keepassxc
+exec --no-startup-id thunar
+exec --no-startup-id fcitx
+exec --no-startup-id iwgtk -i
 #exec --no-startup-id blueberry-tray
-#exec --no-startup-id thunar
 #exec --no-startup-id firefox.sh
 #exec --no-startup-id thunderbird.sh
 #exec --no-startup-id phpstorm
