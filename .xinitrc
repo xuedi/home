@@ -32,6 +32,7 @@ if [ "$HOSTNAME" = athena ]; then
 	export GDK_SCALE=2
 	export QT_AUTO_SCREEN_SCALE_FACTOR=2
 	xrandr --output DP-2 --scale 1x1
+	#xrdb -merge ~/.Xresources   # fucked up font settings for 4K
 	xset s off
 fi
 
