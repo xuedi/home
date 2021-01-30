@@ -21,6 +21,12 @@ on_click = "terminator -x bwm-ng"
 
 [[block]]
 block = "custom"
+interval = 6
+command = "status_wifi_wlp10s0.bash"
+on_click = "terminator -x bwm-ng"
+
+[[block]]
+block = "custom"
 interval = 30
 command = "wifi_info.sh"
 
